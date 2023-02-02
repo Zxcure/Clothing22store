@@ -196,6 +196,17 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Image6.png" />
+    <Resource Include="Windowses\тхуге луве.png" />
+    <Resource Include="Windowses\тхуг.png" />
+    <Resource Include="тхуг.png" />
+    <Resource Include="Image5.png" />
+    <Resource Include="Image4.png" />
+    <Resource Include="Image3.png" />
+    <Resource Include="Image2.png" />
+    <Resource Include="тхуге луве.png" />
+    <Resource Include="res\тхуге луве.png" />
+    <Resource Include="Image1.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -203,7 +214,6 @@
   <ItemGroup>
     <Folder Include="NewFolder1\" />
     <Folder Include="Pages\" />
-    <Folder Include="res\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
