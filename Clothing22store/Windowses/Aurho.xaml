@@ -22,7 +22,7 @@
 
         </StackPanel>
 
-        <StackPanel Height="100" Width="150"  Margin="322,285,323,37.5">
+        <StackPanel Height="100"  Margin="324,291,325,43">
             <Button Content="Log In" Height="25" Margin="0 10 0 10" FontFamily="Old English Text MT" Foreground="White">
                 <Button.Background>
                     <ImageBrush/>
@@ -36,6 +36,6 @@
         </StackPanel>
 
 
-        
+
     </Grid>
 </Window>

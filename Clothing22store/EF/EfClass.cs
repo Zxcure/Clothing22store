@@ -10,6 +10,6 @@ namespace Clothing22store.EF
     {
        
             public static Entities Context { get; } = new Entities();
-
+         
     }
 }

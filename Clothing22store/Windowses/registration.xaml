@@ -1,0 +1,160 @@
+﻿<Window x:Class="Clothing22store.Windowses.registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clothing22store.Windowses"
+        mc:Ignorable="d"
+        Title="registration" Height="650" Width="300">
+    <Grid>
+        <StackPanel Background="Black">
+            <TextBlock Text="Registration"
+                       FontSize="30"
+                       HorizontalAlignment="Center" FontFamily="Old English Text MT" Background="Black" Foreground="White"
+                       />
+            <TextBlock Text="Login" FontFamily="Old English Text MT" Background="Black" Foreground="White"
+                       FontSize="18"
+                       Margin="16 0 0 0"/>
+            <TextBox x:Name="TbLogin"                   
+                     Width="250"
+                     Height="30"
+                     FontSize="18"
+                     HorizontalAlignment="Left"
+                     Margin="24 0 0 8" Background="White"
+                     >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <TextBlock Text="Password" FontFamily="Old English Text MT" Background="Black" Foreground="White" FontSize="18"
+                       Margin="16 0 0 0"/>
+            <PasswordBox x:Name="PbPassword"
+                         Style="{StaticResource roundcornerpassword}"
+                         Width="250"
+                     Height="30"
+                     FontSize="18"
+                     HorizontalAlignment="Left"
+                     Margin="24 0 0 8" Foreground="Black"
+                         >
+                <PasswordBox.Background>
+                    <ImageBrush/>
+                </PasswordBox.Background>
+            </PasswordBox>
+            <TextBlock Text="SurName" FontFamily="Old English Text MT" Background="Black" Foreground="White" FontSize="18"
+                       Margin="16 0 0 0"/>
+            <TextBox x:Name="TblName" Width="250"
+                     Height="30"
+                     FontSize="18"
+                     HorizontalAlignment="Left"
+                     Margin="24 0 0 8" Background="White"
+                     >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBlock Text="Name" FontFamily="Old English Text MT" Background="Black" Foreground="White" FontSize="18"
+                       Margin="16 0 0 0"/>
+            <TextBox x:Name="TbFName"
+                     Width="250"
+                     Height="30"
+                     FontSize="18"
+                     HorizontalAlignment="Left"
+                     Margin="24 0 0 8" Background="White"
+                     >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBlock Text="Patronymic" FontFamily="Old English Text MT" Background="Black" Foreground="White" FontSize="18"
+                       Margin="16 0 0 0"/>
+            <TextBox x:Name="TbPatronumic"
+                     Width="250"
+                     Height="30"
+                     FontSize="18"
+                     HorizontalAlignment="Left"
+                     Margin="24 0 0 8" Background="White"
+                     >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBlock Text="Email" FontFamily="Old English Text MT" Background="Black" Foreground="White" FontSize="18"
+                       Margin="16 0 0 0"/>
+            <TextBox x:Name="TbEmail"
+                     Width="250"
+                     Height="30"
+                     FontSize="18"
+                     HorizontalAlignment="Left"
+                     Margin="24 0 0 8" Background="White"
+                     >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBlock Text="PhoneNumber" FontFamily="Old English Text MT" Background="Black" Foreground="White" FontSize="18"
+                       Margin="16 0 0 0"/>
+            <TextBox x:Name="TbPhone"
+                     Width="250"
+                     Height="30"
+                     FontSize="18"
+                     HorizontalAlignment="Left"
+                     Margin="24 0 0 8" Background="White"
+                     >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBlock Text="BirthDay" FontFamily="Old English Text MT" Background="Black" Foreground="White" FontSize="18"
+                       Margin="16 0 0 0"/>
+            <DatePicker Name="DpDateOfBirth"
+                     Width="250"
+                     Height="30"
+                     FontSize="18"
+                     HorizontalAlignment="Left"
+                     Margin="24 0 0 8"
+                        >
+                <DatePicker.Background>
+                    <ImageBrush/>
+                </DatePicker.Background>
+            </DatePicker>
+            <TextBlock Text="Gender" FontFamily="Old English Text MT" Background="Black" Foreground="White" FontSize="18"
+                       Margin="16 0 0 0"/>
+            <ComboBox x:Name="CmbGender"
+                      Width="250"
+                     Height="30"
+                     FontSize="18"
+                     HorizontalAlignment="Left"
+                     Margin="24 0 0 8" Foreground="White"
+                      >
+                <ComboBox.Background>
+                    <ImageBrush/>
+                </ComboBox.Background>
+            </ComboBox>
+            <Button x:Name="BtnAdduser"
+                    Width="150"
+                    Height="40"
+                    Content="Add"
+                    FontSize="22" Foreground="White" FontFamily="Old English Text MT"
+                    >
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
