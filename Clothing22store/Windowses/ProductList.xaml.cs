@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Clothing22store.Windowses;
 
 namespace Clothing22store.Windowses
 {
@@ -24,20 +25,17 @@ namespace Clothing22store.Windowses
         public ProductList()
         {
             InitializeComponent();
-            GetListProduct();
+            GetList();
         }
 
-        
+        private void GetList()
+        {
+            List<Product> products = new List<Product>();
+            products = EF.EfClass.Context.Product.ToList();
+            LvProduct1.ItemsSource = products;
+        }
     }
 
-    private void GetListProduct()
-    {
-        List<Product> products = new List<Product>();
-        products = EFClass.Context.Product.ToList();
+   
+}
 
-        LvProduct.ItemsSource = products;
-    }
-}
-}
-    }
-}

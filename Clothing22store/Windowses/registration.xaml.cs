@@ -37,12 +37,43 @@ namespace Clothing22store.Windowses
                 MessageBox.Show("Логин не может быть пустым или состоять из пробелов");
                 return;
             }
+            else if (string.IsNullOrWhiteSpace(PbPassword.Text))
+            {
+                MessageBox.Show("Пароль не может быть пустым или состоять из пробелов");
+                return;
+            }
+            else if (string.IsNullOrWhiteSpace(TblName.Text))
+            {
+                MessageBox.Show("Поле фамилия обязательно");
+                return;
+            }
+            else if (string.IsNullOrWhiteSpace(TbFName.Text))
+            {
+                MessageBox.Show("Поле Имя обязательно");
+                return;
+            }
+            else if (string.IsNullOrWhiteSpace(TbEmail.Text))
+            {
+                MessageBox.Show("Поле почты обязательно");
+                return;
+            }
+            string[] dataLogin = TbEmail.Text.Split('@');
+            if (dataLogin.Length !=2)
+            {
+                MessageBox.Show("Поле Email заполнено не по формату x@x.x", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return
+            }
+            string[] data2Login = dataLogin[1].Split('.');
+            if (data2Login.Length !=2)
+            {
+                MessageBox.Show("Поле Email заполнено не по формату x@x.x", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return
+            }
 
-           
             EF.EfClass.Context.User.Add(new User()
             {
                 Login = TbLogin.Text,
-                Password = PbPassword.Password,
+                Password = PbPassword.Text,
                 LastName = TblName.Text,
                 FirstName = TbFName.Text,
                 Patronymic = TbPatronumic.Text,
@@ -64,5 +95,7 @@ namespace Clothing22store.Windowses
 
 
         }
+
+      
     }
 }

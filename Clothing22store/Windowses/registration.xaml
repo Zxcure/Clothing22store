@@ -31,25 +31,28 @@
 
             <TextBlock Text="Password" FontFamily="Old English Text MT" Background="Black" Foreground="White" FontSize="18"
                        Margin="16 0 0 0"/>
-            <PasswordBox x:Name="PbPassword"
-                         Style="{StaticResource roundcornerpassword}"
+            <TextBox x:Name="PbPassword"
+                        
                          Width="250"
                      Height="30"
                      FontSize="18"
                      HorizontalAlignment="Left"
                      Margin="24 0 0 8" Foreground="Black"
                          >
-                <PasswordBox.Background>
-                    <ImageBrush/>
-                </PasswordBox.Background>
-            </PasswordBox>
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+
+            </TextBox>
             <TextBlock Text="SurName" FontFamily="Old English Text MT" Background="Black" Foreground="White" FontSize="18"
                        Margin="16 0 0 0"/>
             <TextBox x:Name="TblName" Width="250"
                      Height="30"
                      FontSize="18"
                      HorizontalAlignment="Left"
-                     Margin="24 0 0 8" Background="White"
+                     Margin="24 0 0 8" Background="White" 
                      >
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -102,7 +105,7 @@
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <TextBlock Text="PhoneNumber" FontFamily="Old English Text MT" Background="Black" Foreground="White" FontSize="18"
+            <TextBlock Text="PhoneNumber +7 " FontFamily="Old English Text MT" Background="Black" Foreground="White" FontSize="18"
                        Margin="16 0 0 0"/>
             <TextBox x:Name="TbPhone"
                      Width="250"
@@ -124,7 +127,7 @@
                      Height="30"
                      FontSize="18"
                      HorizontalAlignment="Left"
-                     Margin="24 0 0 8"
+                     Margin="24 0 0 8" FontFamily="Old English Text MT"
                         >
                 <DatePicker.Background>
                     <ImageBrush/>
@@ -137,7 +140,7 @@
                      Height="30"
                      FontSize="18"
                      HorizontalAlignment="Left"
-                     Margin="24 0 0 8" Foreground="White"
+                     Margin="24 0 0 8" Foreground="#FF070707"
                       >
                 <ComboBox.Background>
                     <ImageBrush/>
@@ -147,7 +150,8 @@
                     Width="150"
                     Height="40"
                     Content="Add"
-                    FontSize="22" Foreground="White" FontFamily="Old English Text MT"
+                    FontSize="22" Foreground="White" FontFamily="Old English Text MT" Click="BtnAdduser_Click"
+            
                     >
                 <Button.Background>
                     <ImageBrush/>

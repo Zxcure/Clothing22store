@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Clothing22store.Windowses"
         mc:Ignorable="d"
         Title="ProductList" Height="400" Width="600">
-    <Grid>
+    <Grid Background="Black">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
@@ -16,15 +16,15 @@
 
         <TextBlock Text="Сatalog"
                    FontSize="30"
-                   HorizontalAlignment="Center" FontFamily="Old English Text MT"/>
+                   HorizontalAlignment="Center" FontFamily="Old English Text MT" Foreground="#FFEEEEEE"/>
 
 
 
-        <ListView x:Name="LvProduct"
+        <ListView x:Name="LvProduct1"
                   Grid.Row="2"
                   Margin="5" 
                   d:ItemsSource="{d:SampleData ItemCount=15}"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="LvProduct_SelectionChanged">
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FFEEECEC" Background="Black" FontFamily="Old English Text MT" >
             <!--<ListView.View>
                 <GridView >
                     <GridViewColumn Header="Наименование"
@@ -59,7 +59,7 @@
                             <Image Height="100"
                                    Width="90"
                                    Source="/Res/img1.jpg"/>
-                            <TextBlock Text="{Binding Name}"
+                            <TextBlock Text="{Binding ThugLife}"
                                        Margin="5 0 0 0"/>
                             <TextBlock Text="{Binding Price}"
                                        FontWeight="Bold"

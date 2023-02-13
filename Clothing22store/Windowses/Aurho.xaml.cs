@@ -31,7 +31,7 @@ namespace Clothing22store.Windowses
         {
            
             
-            var userAuth = EF.EfClass.Context.User.ToList().Where(i => i.Login == LoginBox1.Text && i.Password == PassBx1.Password)
+            var userAuth = EF.EfClass.Context.User.ToList().Where(i => i.Login == LoginBox1.Text && i.Password == PassBx1.Text)
                 .FirstOrDefault();
             if (userAuth != null)
             {
