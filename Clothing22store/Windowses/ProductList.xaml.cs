@@ -32,7 +32,16 @@ namespace Clothing22store.Windowses
         {
             List<Product> products = new List<Product>();
             products = EF.EfClass.Context.Product.ToList();
-            LvProduct1.ItemsSource = products;
+            LvProduct.ItemsSource = products;
+        }
+
+        private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
+        {
+      
+            AddProd addEditProductWindow = new AddProd();
+            addEditProductWindow.ShowDialog();
+
+            GetList();
         }
     }
 

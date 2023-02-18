@@ -61,13 +61,13 @@ namespace Clothing22store.Windowses
             if (dataLogin.Length !=2)
             {
                 MessageBox.Show("Поле Email заполнено не по формату x@x.x", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                return
+                return;
             }
             string[] data2Login = dataLogin[1].Split('.');
             if (data2Login.Length !=2)
             {
                 MessageBox.Show("Поле Email заполнено не по формату x@x.x", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                return
+                return;
             }
 
             EF.EfClass.Context.User.Add(new User()

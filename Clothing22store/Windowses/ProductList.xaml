@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Clothing22store.Windowses"
         mc:Ignorable="d"
         Title="ProductList" Height="400" Width="600">
-    <Grid Background="Black">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
@@ -14,17 +14,17 @@
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Сatalog"
+        <TextBlock Text="Список товаров"
                    FontSize="30"
-                   HorizontalAlignment="Center" FontFamily="Old English Text MT" Foreground="#FFEEEEEE"/>
+                   HorizontalAlignment="Center"/>
 
 
 
-        <ListView x:Name="LvProduct1"
+        <ListView x:Name="LvProduct"
                   Grid.Row="2"
                   Margin="5" 
                   d:ItemsSource="{d:SampleData ItemCount=15}"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FFEEECEC" Background="Black" FontFamily="Old English Text MT" >
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <!--<ListView.View>
                 <GridView >
                     <GridViewColumn Header="Наименование"
@@ -57,9 +57,16 @@
                             Margin="5">
                         <StackPanel>
                             <Image Height="100"
-                                   Width="90"
-                                   Source="/Res/img1.jpg"/>
-                            <TextBlock Text="{Binding ThugLife}"
+                                   Width="90">
+                                <Image.Source>
+                                    <Binding Path="ProductImage">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>/Res/Image5.png</ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+                            <TextBlock Text="{Binding Name}"
                                        Margin="5 0 0 0"/>
                             <TextBlock Text="{Binding Price}"
                                        FontWeight="Bold"
@@ -69,5 +76,16 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+
+        <Button x:Name="BtnAddProduct"
+                Grid.Row="3"
+                Content="Добавить товар"
+                Height="30"
+                Width="150"
+                HorizontalAlignment="Right"
+                FontSize="18"
+                Margin="0 0 10 0"
+                Click="BtnAddProduct_Click"/>
     </Grid>
 </Window>
