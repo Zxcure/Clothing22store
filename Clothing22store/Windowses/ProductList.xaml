@@ -59,9 +59,9 @@
                             <Image Height="100"
                                    Width="90">
                                 <Image.Source>
-                                    <Binding Path="ProductImage">
+                                    <Binding Path="Photo">
                                         <Binding.TargetNullValue>
-                                            <ImageSource>/Res/Image5.png</ImageSource>
+                                            <ImageSource>/Res/question.jpg</ImageSource>
                                         </Binding.TargetNullValue>
                                     </Binding>
                                 </Image.Source>
