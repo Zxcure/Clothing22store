@@ -26,13 +26,64 @@ namespace Clothing22store.Windowses
     public partial class AddProd : Window
     {
         private string pathImageProduct = null;
+        private bool isEdit = false;
+        Product editProduct;
+
         public AddProd()
         {
             InitializeComponent();
+
             CmbCategory.ItemsSource = EF.EfClass.Context.Category.ToList();
             CmbCategory.DisplayMemberPath = "Name";
             CmbCategory.SelectedIndex = 0;
         }
+
+        public AddProd(Product product)
+        {
+            InitializeComponent();
+
+            // Заполнение комбобокса
+
+            CmbCategory.ItemsSource = EF.EfClass.Context.Category.ToList();
+            CmbCategory.DisplayMemberPath = "Name";
+            CmbCategory.SelectedIndex = 0;
+
+            // заполнение полей значениями 
+            TbName.Text = product.Name;
+            TbPrice.Text = product.Price.ToString();
+            CmbCategory.SelectedItem = EF.EfClass.Context.Category.ToList().Where(i => i.IDCategory == product.IDCategory).FirstOrDefault();
+
+            // вывод фото
+
+            if (product.Photo != null)
+            {
+                using (MemoryStream ms = new MemoryStream(product.Photo))
+                {
+                    BitmapImage bitmapImage = new BitmapImage();
+                    bitmapImage.BeginInit();
+                    bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmapImage.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
+                    bitmapImage.StreamSource = ms;
+                    bitmapImage.EndInit();
+                    ImgProduct.Source = bitmapImage;
+                }
+            }
+
+
+            // Изменение заголовка и кнопки 
+
+            TblockTitle.Text = "Изменение товара";
+            BtnAddProduct.Content = "Изменить";
+
+            // флаг на изменение
+            isEdit = true;
+
+            // выводим из контекста класса полученный продукт
+            editProduct = product;
+        }
+
+
+
         private void BtnChooseImage_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -43,27 +94,52 @@ namespace Clothing22store.Windowses
                 pathImageProduct = openFileDialog.FileName;
             }
         }
+
         private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
         {
             // валидация 
 
-            // добавление
-            Product product = new Product();
-            product.Name = TbName.Text;
-            product.Price = Convert.ToDecimal(TbPrice.Text);
-            product.IDCategory = (CmbCategory.SelectedItem as Category).IDCategory;
-            if (pathImageProduct != null)
+            if (isEdit)
             {
-                product.Photo = File.ReadAllBytes(pathImageProduct);
+                // редактирование
+
+                editProduct.Name = TbName.Text;
+                editProduct.Price = Convert.ToDecimal(TbPrice.Text);
+                editProduct.IDCategory = (CmbCategory.SelectedItem as Category).IDCategory;
+                if (pathImageProduct != null)
+                {
+                    editProduct.Photo = File.ReadAllBytes(pathImageProduct);
+                }
+
+                EF.EfClass.Context.SaveChanges();
+
+                MessageBox.Show("Товар успешно изменен");
+
+
+            }
+            else
+            {
+                // добавление
+                Product product = new Product();
+                product.Name = TbName.Text;
+                product.Price = Convert.ToDecimal(TbPrice.Text);
+                product.IDCategory = (CmbCategory.SelectedItem as Category).IDCategory;
+                if (pathImageProduct != null)
+                {
+                    product.Photo = File.ReadAllBytes(pathImageProduct);
+                }
+
+                EF.EfClass.Context.Product.Add(product);
+                EF.EfClass.Context.SaveChanges();
+
+                MessageBox.Show("Товар добавлен");
             }
 
-
-            EfClass.Context.Product.Add(product);
-            EfClass.Context.SaveChanges();
-
-            MessageBox.Show("Товар добавлен");
 
             this.Close();
         }
     }
-}
+
+     
+    }
+

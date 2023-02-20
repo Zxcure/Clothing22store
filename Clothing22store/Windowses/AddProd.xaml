@@ -11,6 +11,7 @@
             <StackPanel HorizontalAlignment="Center"
                     VerticalAlignment="Center">
                 <TextBlock Text="Add Product"
+                           x:Name ="TblockTitle" 
                        FontSize="30"
                        HorizontalAlignment="Center" FontFamily="Old English Text MT" Foreground="White"/>
 
@@ -62,7 +63,14 @@
                      Height="30"
                      FontSize="18"
                      Margin="0 0 0 0"
-                       HorizontalAlignment="Center"/>
+                       HorizontalAlignment="Center" BorderBrush="#FFABADB3" >
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF0F0F0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                </ComboBox>
 
                 <Button x:Name="BtnAddProduct"
                     Width="300"

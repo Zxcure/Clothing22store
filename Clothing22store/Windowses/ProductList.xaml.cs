@@ -34,11 +34,24 @@ namespace Clothing22store.Windowses
             products = EF.EfClass.Context.Product.ToList();
             LvProduct.ItemsSource = products;
         }
-
         private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
         {
-      
-            AddProd addEditProductWindow = new AddProd();
+            // переход на окно добавления товара
+            ProductList addEditProductWindow = new ProductList();
+            addEditProductWindow.ShowDialog();
+
+            GetList();
+        }
+
+        private void BtnMore_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+            Product selectedProduct = button.DataContext as Product;
+            AddProd addEditProductWindow = new AddProd(selectedProduct);
             addEditProductWindow.ShowDialog();
 
             GetList();

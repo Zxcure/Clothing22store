@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Clothing22store.Windowses"
         mc:Ignorable="d"
         Title="ProductList" Height="400" Width="600">
-    <Grid>
+    <Grid Background="Black">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
@@ -14,9 +14,9 @@
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Список товаров"
+        <TextBlock Text="Product List"
                    FontSize="30"
-                   HorizontalAlignment="Center"/>
+                   HorizontalAlignment="Center" Foreground="White" FontFamily="Old English Text MT"/>
 
 
 
@@ -24,7 +24,10 @@
                   Grid.Row="2"
                   Margin="5" 
                   d:ItemsSource="{d:SampleData ItemCount=15}"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="White" TextBlock.FontFamily="Old English Text MT">
+            <ListView.Background>
+                <ImageBrush/>
+            </ListView.Background>
             <!--<ListView.View>
                 <GridView >
                     <GridViewColumn Header="Наименование"
@@ -53,7 +56,7 @@
                     <Border BorderBrush="DarkGray"
                             BorderThickness="2"
                             Width="100"
-                            Height="150"
+                            Height="170"
                             Margin="5">
                         <StackPanel>
                             <Image Height="100"
@@ -71,6 +74,10 @@
                             <TextBlock Text="{Binding Price}"
                                        FontWeight="Bold"
                                        Margin="5 0 0 0"/>
+                            <Button x:Name="BtnMore" 
+                                    Content="Подробнее"
+                                    Margin="10 10 10 0"
+                                    Click="BtnMore_Click"/>
                         </StackPanel>
                     </Border>
                 </DataTemplate>
@@ -80,12 +87,16 @@
 
         <Button x:Name="BtnAddProduct"
                 Grid.Row="3"
-                Content="Добавить товар"
+                Content="Add Product"
                 Height="30"
                 Width="150"
                 HorizontalAlignment="Right"
                 FontSize="18"
                 Margin="0 0 10 0"
-                Click="BtnAddProduct_Click"/>
+                Click="BtnAddProduct_Click" Foreground="White" TextBlock.FontFamily="Old English Text MT">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

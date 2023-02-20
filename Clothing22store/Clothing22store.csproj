@@ -137,6 +137,9 @@
     <Compile Include="Windowses\Aurho.xaml.cs">
       <DependentUpon>Aurho.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windowses\editProd.xaml.cs">
+      <DependentUpon>editProd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windowses\ProductList.xaml.cs">
       <DependentUpon>ProductList.xaml</DependentUpon>
     </Compile>
@@ -160,6 +163,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windowses\Aurho.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windowses\editProd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
