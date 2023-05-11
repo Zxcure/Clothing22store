@@ -17,6 +17,7 @@ using Clothing22store.Windowses;
 using Clothing22store.Db;
 using System.IO;
 using Microsoft.Win32;
+using Clothing22store.EF;
 
 namespace Clothing22store.Windowses
 {

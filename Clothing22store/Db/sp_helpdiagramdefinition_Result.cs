@@ -10,14 +10,10 @@
 namespace Clothing22store.Db
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Passport
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int IDPassport { get; set; }
-        public int Series { get; set; }
-        public int Number { get; set; }
-        public System.DateTime DateOfIssue { get; set; }
-        public string IssueBy { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

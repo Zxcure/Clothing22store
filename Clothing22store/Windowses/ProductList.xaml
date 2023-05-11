@@ -23,7 +23,7 @@
         <ListView x:Name="LvProduct"
                   Grid.Row="2"
                   Margin="5" 
-                  d:ItemsSource="{d:SampleData ItemCount=15}"
+              
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="White" TextBlock.FontFamily="Old English Text MT">
             <ListView.Background>
                 <ImageBrush/>

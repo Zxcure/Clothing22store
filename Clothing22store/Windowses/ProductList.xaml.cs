@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Clothing22store.Windowses;
 
+
 namespace Clothing22store.Windowses
 {
     /// <summary>
@@ -36,8 +37,8 @@ namespace Clothing22store.Windowses
         }
         private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
         {
-            // переход на окно добавления товара
-            ProductList addEditProductWindow = new ProductList();
+         
+            AddProd addEditProductWindow = new AddProd();
             addEditProductWindow.ShowDialog();
 
             GetList();

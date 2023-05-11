@@ -17,7 +17,7 @@ namespace Clothing22store.Db
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Size()
         {
-            this.ClothingBarn = new HashSet<ClothingBarn>();
+            this.Characteristic = new HashSet<Characteristic>();
         }
     
         public int IDSize { get; set; }
@@ -26,6 +26,6 @@ namespace Clothing22store.Db
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClothingBarn> ClothingBarn { get; set; }
+        public virtual ICollection<Characteristic> Characteristic { get; set; }
     }
 }
