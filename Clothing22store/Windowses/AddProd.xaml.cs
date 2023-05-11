@@ -17,6 +17,7 @@ using Clothing22store.Windowses;
 using Clothing22store.Db;
 using System.IO;
 using Microsoft.Win32;
+using Clothing22store.EF;
 
 namespace Clothing22store.Windowses
 {
@@ -33,7 +34,7 @@ namespace Clothing22store.Windowses
         {
             InitializeComponent();
 
-            CmbCategory.ItemsSource = EF.EfClass.Context.Category.ToList();
+            CmbCategory.ItemsSource = EF.UserDataClas.Context.Category.ToList();
             CmbCategory.DisplayMemberPath = "Name";
             CmbCategory.SelectedIndex = 0;
         }
@@ -44,14 +45,14 @@ namespace Clothing22store.Windowses
 
             // Заполнение комбобокса
 
-            CmbCategory.ItemsSource = EF.EfClass.Context.Category.ToList();
+            CmbCategory.ItemsSource = EF.UserDataClas.Context.Category.ToList();
             CmbCategory.DisplayMemberPath = "Name";
             CmbCategory.SelectedIndex = 0;
 
             // заполнение полей значениями 
             TbName.Text = product.Name;
             TbPrice.Text = product.Price.ToString();
-            CmbCategory.SelectedItem = EF.EfClass.Context.Category.ToList().Where(i => i.IDCategory == product.IDCategory).FirstOrDefault();
+            CmbCategory.SelectedItem = EF.UserDataClas.Context.Category.ToList().Where(i => i.IDCategory == product.IDCategory).FirstOrDefault();
 
             // вывод фото
 
@@ -111,7 +112,7 @@ namespace Clothing22store.Windowses
                     editProduct.Photo = File.ReadAllBytes(pathImageProduct);
                 }
 
-                EF.EfClass.Context.SaveChanges();
+                EF.UserDataClas.Context.SaveChanges();
 
                 MessageBox.Show("Товар успешно изменен");
 
@@ -129,8 +130,8 @@ namespace Clothing22store.Windowses
                     product.Photo = File.ReadAllBytes(pathImageProduct);
                 }
 
-                EF.EfClass.Context.Product.Add(product);
-                EF.EfClass.Context.SaveChanges();
+                EF.UserDataClas.Context.Product.Add(product);
+                EF.UserDataClas.Context.SaveChanges();
 
                 MessageBox.Show("Товар добавлен");
             }

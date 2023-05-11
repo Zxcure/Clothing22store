@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 using Clothing22store.Db;
 namespace Clothing22store.EF
 {
-    public class UserDataClas
+    class ClassPas
     {
-        public static Entities Context { get; } = new Entities();
+        public static User User { get; set; }
+
+        public static Employee Employee { get; set; }
+
+        public static Client Client { get; set; }
     }
 }

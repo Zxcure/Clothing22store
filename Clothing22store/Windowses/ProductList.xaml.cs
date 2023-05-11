@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Clothing22store.Windowses;
 
+
 namespace Clothing22store.Windowses
 {
     /// <summary>
@@ -27,17 +28,20 @@ namespace Clothing22store.Windowses
             InitializeComponent();
             GetList();
         }
-
+        private void GetCountCartProduct()
+        {
+            TxtCartCount.Text = EF.Cart.Products.Count.ToString();
+        }
         private void GetList()
         {
             List<Product> products = new List<Product>();
-            products = EF.EfClass.Context.Product.ToList();
+            products = EF.UserDataClas.Context.Product.ToList();
             LvProduct.ItemsSource = products;
         }
         private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
         {
-            // переход на окно добавления товара
-            ProductList addEditProductWindow = new ProductList();
+         
+            AddProd addEditProductWindow = new AddProd();
             addEditProductWindow.ShowDialog();
 
             GetList();
@@ -55,6 +59,31 @@ namespace Clothing22store.Windowses
             addEditProductWindow.ShowDialog();
 
             GetList();
+        }
+        private void BtnCart_Click(object sender, RoutedEventArgs e)
+        {
+            // добавление в корзину
+
+            Button button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+
+            Product selectedProduct = button.DataContext as Product;
+
+            EF.Cart.Products.Add(selectedProduct);
+
+            GetCountCartProduct();
+        }
+
+        private void BtnGoToCart_Click(object sender, RoutedEventArgs e)
+        {
+            Cart cArtWindow = new Cart();
+            cArtWindow.Show();
+            this.Close();
+
+            GetCountCartProduct();
         }
     }
 

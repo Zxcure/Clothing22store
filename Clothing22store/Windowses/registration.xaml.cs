@@ -24,7 +24,7 @@ namespace Clothing22store.Windowses
         public registration()
         {
             InitializeComponent();
-            CmbGender.ItemsSource = EF.EfClass.Context.Gender.ToList();
+            CmbGender.ItemsSource = EF.UserDataClas.Context.Gender.ToList();
             CmbGender.SelectedIndex = 0;
             CmbGender.DisplayMemberPath = "GenderName";
         }
@@ -200,7 +200,7 @@ namespace Clothing22store.Windowses
                 return;
             }
 
-            EF.EfClass.Context.User.Add(new User()
+            EF.UserDataClas.Context.User.Add(new User()
             {
 
                 Login = TbLogin.Text,
@@ -216,7 +216,7 @@ namespace Clothing22store.Windowses
             });
 
            
-            EF.EfClass.Context.SaveChanges();
+            EF.UserDataClas.Context.SaveChanges();
 
 
 

@@ -12,19 +12,19 @@ namespace Clothing22store.Db
     using System;
     using System.Collections.Generic;
     
-    public partial class ClothingBarn
+    public partial class Characteristic
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ClothingBarn()
+        public Characteristic()
         {
             this.OrderProduct = new HashSet<OrderProduct>();
         }
     
-        public int IDClothingBarn { get; set; }
+        public int IDCharacteristic { get; set; }
         public int IDColor { get; set; }
         public int IDSize { get; set; }
         public int IDProduct { get; set; }
-        public Nullable<int> Quantity { get; set; }
+        public Nullable<decimal> ChangePrice { get; set; }
     
         public virtual Color Color { get; set; }
         public virtual Product Product { get; set; }

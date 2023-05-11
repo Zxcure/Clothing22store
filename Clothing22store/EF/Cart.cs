@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Clothing22store.Db;
+
 namespace Clothing22store.EF
 {
-    public class UserDataClas
+    class Cart
     {
-        public static Entities Context { get; } = new Entities();
+        public static List<Db.Product> Products  = new List<Db.Product>();
     }
 }

@@ -18,12 +18,33 @@
                    FontSize="30"
                    HorizontalAlignment="Center" Foreground="White" FontFamily="Old English Text MT"/>
 
+        <WrapPanel Grid.Row="1" 
+                   HorizontalAlignment="Right">
+            <Button x:Name="BtnGoToCart"                
+                Width="30"
+                Height="30"
+                HorizontalAlignment="Right"
+                Margin="0 0 20 0"
+                Background="{x:Null}"
+                BorderThickness="0"
+                Click="BtnGoToCart_Click" Foreground="#FF3E0B0B">
+                <Button.BorderBrush>
+                    <ImageBrush ImageSource="тхуг.png"/>
+                </Button.BorderBrush>
 
+            </Button>
+            <TextBlock x:Name="TxtCartCount" 
+                       Text="0"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"
+                       FontSize="18"
+                       Margin="0 0 5 0"/>
+        </WrapPanel>
 
         <ListView x:Name="LvProduct"
                   Grid.Row="2"
                   Margin="5" 
-                  d:ItemsSource="{d:SampleData ItemCount=15}"
+              
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="White" TextBlock.FontFamily="Old English Text MT">
             <ListView.Background>
                 <ImageBrush/>
@@ -74,10 +95,30 @@
                             <TextBlock Text="{Binding Price}"
                                        FontWeight="Bold"
                                        Margin="5 0 0 0"/>
-                            <Button x:Name="BtnMore" 
-                                    Content="Подробнее"
-                                    Margin="10 10 10 0"
-                                    Click="BtnMore_Click"/>
+                            <WrapPanel>
+                                <Button x:Name="BtnMore" 
+                                        Content="Подробнее"
+                                    Width="30"
+                                    Height="30"
+                                    Margin="5 0 15 0"
+                                    Background="{x:Null}"
+                                    BorderThickness="0"
+                                    Click="BtnMore_Click">
+                                    
+                                </Button>
+
+                                <Button x:Name="BtnCart" 
+                                        Content="Корзина"
+                                    Width="30"
+                                    Height="30"
+                                    Margin="15 0 0 0"
+                                    Background="{x:Null}"
+                                    BorderThickness="0"
+                                        Click="BtnCart_Click">
+                                    
+                                </Button>
+                                
+                            </WrapPanel>
                         </StackPanel>
                     </Border>
                 </DataTemplate>
