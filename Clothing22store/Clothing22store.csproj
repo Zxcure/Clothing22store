@@ -269,6 +269,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="res\карандаш.png" />
+    <Resource Include="res\плюс.png" />
+    <Resource Include="Windowses\плюс.png" />
+    <Resource Include="Windowses\рипупа.png" />
     <Resource Include="Windowses\backgroundmain.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
