@@ -50,7 +50,11 @@
                   Grid.Row="2"
                   Margin="5" 
               
+<<<<<<< HEAD
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="Black" TextBlock.FontFamily="Old English Text MT">
+=======
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="White" TextBlock.FontFamily="Old English Text MT">
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
             <ListView.Background>
                 <ImageBrush/>
             </ListView.Background>

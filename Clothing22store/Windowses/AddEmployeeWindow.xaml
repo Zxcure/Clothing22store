@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:Clothing22store.Windowses"
         mc:Ignorable="d"
         Title="AddEmployeeWindow" Height="1000" Width="600">
+<<<<<<< HEAD
     <Grid    Background="Black"  >
+=======
+    <Grid    Background="#FFF5EEDC"  >
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
 
        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock
@@ -15,7 +19,11 @@
                 FontSize="50"
                  VerticalAlignment="Center"
                 HorizontalAlignment="Center"
+<<<<<<< HEAD
                 FontWeight="Black" Foreground="White"
+=======
+                FontWeight="Black" Foreground="#FF543B3B"
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
               
              />
             <TextBlock
@@ -26,7 +34,11 @@
               
                 
                 Margin="10 10 0 0"
+<<<<<<< HEAD
                  FontWeight="Black" Foreground="White"
+=======
+                 FontWeight="Black" Foreground="#FF785013"
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
              />
             <TextBox
                  x:Name="TextFirstName"
@@ -45,7 +57,11 @@
                 Text="Введите фамилию"
                 FontSize="20"
                 VerticalAlignment="Center"
+<<<<<<< HEAD
                  FontWeight="Black" Foreground="White"
+=======
+                 FontWeight="Black" Foreground="#FF785013"
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
                 
                 Margin="10 10 0 0"
              />
@@ -64,7 +80,11 @@
                 Text="Введите вашу дату рождения"
                 FontSize="20"
                 VerticalAlignment="Center"
+<<<<<<< HEAD
                  FontWeight="Black" Foreground="White"
+=======
+                 FontWeight="Black" Foreground="#FF785013"
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
                 
                 Margin="10 10 0 0"
              />
@@ -76,7 +96,11 @@
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
                 Margin="0 10 0 0"
+<<<<<<< HEAD
                  FontWeight="Black" Foreground="Black"/>
+=======
+                 FontWeight="Black" Foreground="#FF785013"/>
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
 
 
             <TextBlock
@@ -86,7 +110,11 @@
                 VerticalAlignment="Center"
                 
                 Margin="10 10 0 0"
+<<<<<<< HEAD
                  FontWeight="Black" Foreground="#FFFDFDFD"
+=======
+                 FontWeight="Black" Foreground="#FF785013"
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
              />
             <TextBox
                  x:Name="TextPhone"
@@ -102,7 +130,11 @@
                 Text="Придумайте логин"
                 FontSize="20"
                 VerticalAlignment="Center"
+<<<<<<< HEAD
                  FontWeight="Black" Foreground="White"
+=======
+                 FontWeight="Black" Foreground="#FF785013"
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
                 Margin="10 20 0 0"
              />
             <TextBox
@@ -134,7 +166,11 @@
                 FontSize="20"
                 VerticalAlignment="Center"
                 Margin="10 20 0 0"
+<<<<<<< HEAD
                  FontWeight="Black" Foreground="White"
+=======
+                 FontWeight="Black" Foreground="#FF785013"
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
              />
             <PasswordBox
                 x:Name="PBPasswoed"
@@ -147,11 +183,19 @@
                 x:Name="Vhod"
                 Height="80"
                 Content="Добавить"
+<<<<<<< HEAD
                 Foreground="White"
                 FontWeight="Black"
                 Margin="0 80 0 0"
                 FontSize="25"
                 Width="300"  Background="Black"
+=======
+                Foreground="#FF815D3E"
+                FontWeight="Black"
+                Margin="0 80 0 0"
+                FontSize="25"
+                Width="300"  Background="#FFE1D3A9"
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
                     BorderBrush="White" Click="Vhod_Click"
                 >
 

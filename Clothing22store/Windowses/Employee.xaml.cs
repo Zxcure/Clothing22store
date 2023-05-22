@@ -27,7 +27,11 @@ namespace Clothing22store.Windowses
                 btnAddProd.Visibility = Visibility.Hidden;
             }
 
+<<<<<<< HEAD
             EmpGrid.ItemsSource = EF.UserDataClas.Context.Employee.ToList();
+=======
+            EmpGrid.ItemsSource = EF.EfClass.Context.Employee.ToList();
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
         }
 
         private void btnAddProd_Click(object sender, RoutedEventArgs e)
@@ -39,7 +43,11 @@ namespace Clothing22store.Windowses
 
         private void edit_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             EF.UserDataClas.Context.SaveChanges();
+=======
+            EF.EfClass.Context.SaveChanges();
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
             MessageBox.Show("Изменено");
         }
     }

@@ -130,10 +130,16 @@
     <Compile Include="Db\User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="EF\Cart.cs" />
     <Compile Include="EF\ClassPas.cs" />
     <Compile Include="EF\EfClass.cs" />
     <Compile Include="EF\EmployeeDataContextClass.cs" />
+=======
+    <Compile Include="EF\EfClass.cs" />
+    <Compile Include="EF\EmployeeDataContextClass.cs" />
+    <Compile Include="EF\UserDataClass.cs" />
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
     <Compile Include="Windowses\AddEmployeeWindow.xaml.cs">
       <DependentUpon>AddEmployeeWindow.xaml</DependentUpon>
     </Compile>
@@ -269,11 +275,14 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+<<<<<<< HEAD
     <Resource Include="res\карандаш.png" />
     <Resource Include="res\плюс.png" />
     <Resource Include="Windowses\плюс.png" />
     <Resource Include="Windowses\рипупа.png" />
     <Resource Include="Windowses\backgroundmain.png" />
+=======
+>>>>>>> 234fc076c65f6578c74be4996ab3ac1cf0986d8f
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
