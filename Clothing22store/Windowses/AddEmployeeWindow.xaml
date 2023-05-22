@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Clothing22store.Windowses"
         mc:Ignorable="d"
         Title="AddEmployeeWindow" Height="1000" Width="600">
-    <Grid    Background="#FFF5EEDC"  >
+    <Grid    Background="Black"  >
 
        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock
@@ -15,7 +15,7 @@
                 FontSize="50"
                  VerticalAlignment="Center"
                 HorizontalAlignment="Center"
-                FontWeight="Black" Foreground="#FF543B3B"
+                FontWeight="Black" Foreground="White"
               
              />
             <TextBlock
@@ -26,7 +26,7 @@
               
                 
                 Margin="10 10 0 0"
-                 FontWeight="Black" Foreground="#FF785013"
+                 FontWeight="Black" Foreground="White"
              />
             <TextBox
                  x:Name="TextFirstName"
@@ -45,7 +45,7 @@
                 Text="Введите фамилию"
                 FontSize="20"
                 VerticalAlignment="Center"
-                 FontWeight="Black" Foreground="#FF785013"
+                 FontWeight="Black" Foreground="White"
                 
                 Margin="10 10 0 0"
              />
@@ -64,7 +64,7 @@
                 Text="Введите вашу дату рождения"
                 FontSize="20"
                 VerticalAlignment="Center"
-                 FontWeight="Black" Foreground="#FF785013"
+                 FontWeight="Black" Foreground="White"
                 
                 Margin="10 10 0 0"
              />
@@ -76,7 +76,7 @@
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
                 Margin="0 10 0 0"
-                 FontWeight="Black" Foreground="#FF785013"/>
+                 FontWeight="Black" Foreground="Black"/>
 
 
             <TextBlock
@@ -86,7 +86,7 @@
                 VerticalAlignment="Center"
                 
                 Margin="10 10 0 0"
-                 FontWeight="Black" Foreground="#FF785013"
+                 FontWeight="Black" Foreground="#FFFDFDFD"
              />
             <TextBox
                  x:Name="TextPhone"
@@ -102,7 +102,7 @@
                 Text="Придумайте логин"
                 FontSize="20"
                 VerticalAlignment="Center"
-                 FontWeight="Black" Foreground="#FF785013"
+                 FontWeight="Black" Foreground="White"
                 Margin="10 20 0 0"
              />
             <TextBox
@@ -134,7 +134,7 @@
                 FontSize="20"
                 VerticalAlignment="Center"
                 Margin="10 20 0 0"
-                 FontWeight="Black" Foreground="#FF785013"
+                 FontWeight="Black" Foreground="White"
              />
             <PasswordBox
                 x:Name="PBPasswoed"
@@ -147,11 +147,11 @@
                 x:Name="Vhod"
                 Height="80"
                 Content="Добавить"
-                Foreground="#FF815D3E"
+                Foreground="White"
                 FontWeight="Black"
                 Margin="0 80 0 0"
                 FontSize="25"
-                Width="300"  Background="#FFE1D3A9"
+                Width="300"  Background="Black"
                     BorderBrush="White" Click="Vhod_Click"
                 >
 

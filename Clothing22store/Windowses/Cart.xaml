@@ -14,9 +14,9 @@
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Корзина"
+        <TextBlock Text="Cart"
                    FontSize="30"
-                   HorizontalAlignment="Center"/>
+                   HorizontalAlignment="Center" FontFamily="Old English Text MT"/>
 
         <Button x:Name="BtnGoToProduct"
                 Grid.Row="1"
@@ -26,7 +26,7 @@
                 Margin="0 0 20 0"
                 Background="{x:Null}"
                 BorderThickness="0"
-                Content="Назад">
+                Content="Back" Click="BtnGoToProduct_Click" FontFamily="Old English Text MT">
 
         </Button>
 
@@ -56,7 +56,7 @@
                         <StackPanel>
                             <Image Height="100"
                                    Width="90">
-                               
+
                             </Image>
                             <TextBlock Text="{Binding Name}"
                                        Margin="5 0 0 0"/>
@@ -73,7 +73,7 @@
                                     Background="{x:Null}"
                                     BorderThickness="0"
                                         >
-                                   
+
                                 </Button>
 
                             </WrapPanel>
@@ -87,12 +87,16 @@
 
         <Button x:Name="BtnBuy"
                 Grid.Row="3"
-                Content="Купить"
+                Content="Buy"
                 Height="30"
                 Width="150"
                 HorizontalAlignment="Right"
                 FontSize="18"
-                Margin="0 0 10 0"
-                />
+                Margin="0 0 10 0" FontFamily="Old English Text MT" BorderBrush="#FF707070"
+                >
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

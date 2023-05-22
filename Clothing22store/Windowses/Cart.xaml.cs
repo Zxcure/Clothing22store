@@ -29,8 +29,12 @@ namespace Clothing22store.Windowses
             LvCartProduct.ItemsSource = EF.Cart.Products;
         }
 
-
-
+        private void BtnGoToProduct_Click(object sender, RoutedEventArgs e)
+        {
+            ProductList addEditProductWindow = new ProductList();
+            addEditProductWindow.ShowDialog();
+           
+        }
     }
     }
 

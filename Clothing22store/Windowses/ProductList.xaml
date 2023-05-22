@@ -54,19 +54,7 @@
             <ListView.Background>
                 <ImageBrush/>
             </ListView.Background>
-            <!--<ListView.View>
-                <GridView >
-                    <GridViewColumn Header="Наименование"
-                                    Width="150"
-                                    DisplayMemberBinding="{Binding Name}"/>
-                    <GridViewColumn Header="Цена"
-                                    Width="150"
-                                    DisplayMemberBinding="{Binding Price}"/>
-                    <GridViewColumn Header="01"
-                                    Width="150"/>
-                </GridView>
-            </ListView.View>-->
-
+        
 
 
             <ListView.ItemsPanel>
@@ -77,7 +65,7 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <!-- Шаблон одного элемета -->
+              
 
                     <Border BorderBrush="DarkGray"
                             BorderThickness="2"
